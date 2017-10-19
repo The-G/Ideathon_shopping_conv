@@ -94,20 +94,26 @@ VERSION : 1.1
  			<div class="row" align="center">
 			    <img src="images/market_share.png" />
         <!--Chart-->
-        <div id="CategoryData"></div>
+        <div class="row">
+            <div class="col-md-4 col-xs-12"> </div>
+            <div class="col-md-4 col-xs-12">
+                <div  id="CategoryData"></div>
+            </div>
+            <div class="col-md-4 col-xs-12"> </div>
+        </div>
         <script>
             var chart = bb.generate({
               "data": {
                 "x": "x",
                 "columns": [
-            	["x", "www.site1.com", "www.site2.com", "www.site3.com", "www.site4.com"],
-            	["download", 30, 200, 100, 400],
-            	["loading", 90, 100, 140, 200]
+            	["x", "2014년"],
+            	["PC", 14.8],
+            	["mobile", 30.44]
                 ],
                 "groups": [
                   [
-                    "download",
-                    "loading"
+                    "PC",
+                    "mobile"
                   ]
                 ],
                 "type": "bar"
@@ -123,19 +129,9 @@ VERSION : 1.1
             setTimeout(function () {
             	chart.load({
             		columns: [
-            			['x', 'www.siteA.com', 'www.siteB.com', 'www.siteC.com', 'www.siteD.com'],
-            			['download', 130, 200, 150, 350],
-            			['loading', 190, 180, 190, 140],
-            		],
-            	});
-            }, 1000);
-            
-            setTimeout(function () {
-            	chart.load({
-            		columns: [
-            			['x', 'www.siteE.com', 'www.siteF.com', 'www.siteG.com'],
-            			['download', 30, 300, 200],
-            			['loading', 90, 130, 240],
+            			["x", "2014년", "2015년"],
+                    	["PC", 14.8, 24.42],
+                    	["mobile", 30.44, 29.51]
             		],
             	});
             }, 2000);
@@ -143,86 +139,27 @@ VERSION : 1.1
             setTimeout(function () {
             	chart.load({
             		columns: [
-            			['x', 'www.site1.com', 'www.site2.com', 'www.site3.com', 'www.site4.com'],
-            			['download', 130, 300, 200, 470],
-            			['loading', 190, 130, 240, 340],
-            		],
-            	});
-            }, 3000);
-            
-            setTimeout(function () {
-            	chart.load({
-            		columns: [
-            			['download', 30, 30, 20, 170],
-            			['loading', 90, 30, 40, 40],
+            			["x", "2014년", "2015년", "2016년"],
+                    	["PC", 14.8, 24.42, 34.7],
+                    	["mobile", 30.44, 29.51, 30.20]
             		],
             	});
             }, 4000);
-            
+                        
             setTimeout(function () {
             	chart.load({
-            		url: './data/string_x.csv'
+            		columns: [
+            			["x", "2014년", "2015년", "2016년", "2017년"],
+                    	["PC", 14.8, 24.42, 34.7, 36.24],
+                    	["mobile", 30.44, 29.51, 30.20, 47.64]
+            		],
             	});
-            }, 5000);
+            }, 6000);
+            
         </script>
         <!---->
 
 			</div>
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="our-stats-box text-center">
-                        <div class="our-stat-icon">
-                            <span class="fa fa-ge"></span> <!--icon 변경-->
-                            <span><img src="images/bottom_icon1_sub.png" /></span> <!--icon 변경-->
-                        </div>
-                        <div class="our-stat-info">
-                            <span class="stats" data-from="0" data-to="45" data-speed="5000"
-                                  data-refresh-interval="50"></span>
-
-                            <h5>Total Downloaded</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="our-stats-box text-center">
-                        <div class="our-stat-icon">
-                            <span class="fa fa-git-square"></span>
-                        </div>
-                        <div class="our-stat-info">
-                            <span class="stats" data-from="0" data-to="54" data-speed="5000"
-                                  data-refresh-interval="50"></span>
-
-                            <h5>Editors Supported</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="our-stats-box text-center">
-                        <div class="our-stat-icon">
-                            <span class="fa fa-globe"></span>
-                        </div>
-                        <div class="our-stat-info">
-                            <span class="stats" data-from="0" data-to="65" data-speed="5000"
-                                  data-refresh-interval="50"></span>
-
-                            <h5>Languages Detected</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="our-stats-box text-center">
-                        <div class="our-stat-icon">
-                            <span class="fa fa-gears"></span>
-                        </div>
-                        <div class="our-stat-info">
-                            <span class="stats" data-from="0" data-to="78" data-speed="5000"
-                                  data-refresh-interval="50"></span>
-
-                            <h5>Happy Clients</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
  </section>
 
