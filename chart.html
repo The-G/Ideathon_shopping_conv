@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+AUTHOR : Vijayan PP
+PROJECT :A-MD
+VERSION : 1.1
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=devidev-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Shopping conversation Project!!</title>
+
+	<!-- [ FONT-AWESOME ICON ]
+        =========================================================================================================================-->
+	<link rel="stylesheet" type="text/css" href="library/font-awesome-4.3.0/css/font-awesome.min.css">
+	<style>
+		@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+		@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+		@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+		@import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+		@import url(http://fonts.googleapis.com/earlyaccess/kopubbatang.css);
+		@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+		@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+		@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+		@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+		@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+		@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+		p { font-size: 24px; }
+		.hn { font-family: 'Hanna'; }
+		.jg { font-family: 'Jeju Gothic'; }
+		.jh { font-family: 'Jeju Hallasan'; }
+		.jm { font-family: 'Jeju Myeongjo'; }
+		.kb { font-family: 'Kopub Batang'; }
+		.nbs { font-family: 'Nanum Brush Script'; }
+		.ng { font-family: 'Nanum Gothic'; }
+		.ngc { font-family: 'Nanum Gothic Coding'; }
+		.nm { font-family: 'Nanum Myeongjo'; }
+		.nps { font-family: 'Nanum Pen Script'; }
+		.ns { font-family: 'Noto Sans KR'; }
+	</style>
+
+	<!-- [ PLUGIN STYLESHEET ]
+        =========================================================================================================================-->
+	<link rel="shortcut icon" type="image/x-icon" href="images/icon.png">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+        <link rel ="stylesheet" type="text/css" href="library/vegas/vegas.min.css">
+	<!-- [ Boot STYLESHEET ]
+        =========================================================================================================================-->
+	<link rel="stylesheet" type="text/css" href="library/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="library/bootstrap/css/bootstrap.css">
+
+        <!-- [ DEFAULT STYLESHEET ]
+        =========================================================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/color/green.css">
+
+  <!--to chart-->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link rel="stylesheet" href="https://naver.github.io/billboard.js/release/latest/dist/billboard.css">
+  <script src="https://naver.github.io/billboard.js/release/latest/dist/billboard.js"></script>
+  <!---->
+  
+  
+  
+</head>
+<body >
+
+<!-- [ LOADERs ]
+================================================================================================================================-->
+    <div class="preloader">
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!-- [ /PRELOADER ]
+=============================================================================================================================-->
+<!-- [WRAPPER ]
+=============================================================================================================================-->
+<div class="wrapper">
+
+ <!-- E[CURRENT STATS] TODO:: erase
+=============================================================================================================================-->
+ <section class="our-stats" id="stats" style="background:white">
+ <div class="container">
+	        <!-- ppt 아래 넣어도 되겠다. -->
+ 			<div class="row" align="center">
+			    <img src="images/market_share.png" />
+        <!--Chart-->
+        <div id="CategoryData"></div>
+        <script>
+            var chart = bb.generate({
+              "data": {
+                "x": "x",
+                "columns": [
+            	["x", "www.site1.com", "www.site2.com", "www.site3.com", "www.site4.com"],
+            	["download", 30, 200, 100, 400],
+            	["loading", 90, 100, 140, 200]
+                ],
+                "groups": [
+                  [
+                    "download",
+                    "loading"
+                  ]
+                ],
+                "type": "bar"
+              },
+              "axis": {
+                "x": {
+                  "type": "category"
+                }
+              },
+              "bindto": "#CategoryData"
+            });
+            
+            setTimeout(function () {
+            	chart.load({
+            		columns: [
+            			['x', 'www.siteA.com', 'www.siteB.com', 'www.siteC.com', 'www.siteD.com'],
+            			['download', 130, 200, 150, 350],
+            			['loading', 190, 180, 190, 140],
+            		],
+            	});
+            }, 1000);
+            
+            setTimeout(function () {
+            	chart.load({
+            		columns: [
+            			['x', 'www.siteE.com', 'www.siteF.com', 'www.siteG.com'],
+            			['download', 30, 300, 200],
+            			['loading', 90, 130, 240],
+            		],
+            	});
+            }, 2000);
+            
+            setTimeout(function () {
+            	chart.load({
+            		columns: [
+            			['x', 'www.site1.com', 'www.site2.com', 'www.site3.com', 'www.site4.com'],
+            			['download', 130, 300, 200, 470],
+            			['loading', 190, 130, 240, 340],
+            		],
+            	});
+            }, 3000);
+            
+            setTimeout(function () {
+            	chart.load({
+            		columns: [
+            			['download', 30, 30, 20, 170],
+            			['loading', 90, 30, 40, 40],
+            		],
+            	});
+            }, 4000);
+            
+            setTimeout(function () {
+            	chart.load({
+            		url: './data/string_x.csv'
+            	});
+            }, 5000);
+        </script>
+        <!---->
+
+			</div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="our-stats-box text-center">
+                        <div class="our-stat-icon">
+                            <span class="fa fa-ge"></span> <!--icon 변경-->
+                            <span><img src="images/bottom_icon1_sub.png" /></span> <!--icon 변경-->
+                        </div>
+                        <div class="our-stat-info">
+                            <span class="stats" data-from="0" data-to="45" data-speed="5000"
+                                  data-refresh-interval="50"></span>
+
+                            <h5>Total Downloaded</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="our-stats-box text-center">
+                        <div class="our-stat-icon">
+                            <span class="fa fa-git-square"></span>
+                        </div>
+                        <div class="our-stat-info">
+                            <span class="stats" data-from="0" data-to="54" data-speed="5000"
+                                  data-refresh-interval="50"></span>
+
+                            <h5>Editors Supported</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="our-stats-box text-center">
+                        <div class="our-stat-icon">
+                            <span class="fa fa-globe"></span>
+                        </div>
+                        <div class="our-stat-info">
+                            <span class="stats" data-from="0" data-to="65" data-speed="5000"
+                                  data-refresh-interval="50"></span>
+
+                            <h5>Languages Detected</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="our-stats-box text-center">
+                        <div class="our-stat-icon">
+                            <span class="fa fa-gears"></span>
+                        </div>
+                        <div class="our-stat-info">
+                            <span class="stats" data-from="0" data-to="78" data-speed="5000"
+                                  data-refresh-interval="50"></span>
+
+                            <h5>Happy Clients</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ </section>
+
+ <!-- [CURRENT STATS]
+=============================================================================================================================-->
+
+</div>
+
+
+<!-- [ /WRAPPER ]
+=============================================================================================================================-->
+
+	<!-- [ DEFAULT SCRIPT ] -->
+	<script src="library/modernizr.custom.97074.js"></script>
+	<script src="library/jquery-1.11.3.min.js"></script>
+        <script src="library/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script src="library/vegas/vegas.min.js"></script>
+	<!-- [ PLUGIN SCRIPT ] -->
+
+	<script src="js/plugins.js"></script>
+        <script src="js/fappear.js"></script>
+       <script src="js/jquery.countTo.js"></script>
+	<script src="js/scrollreveal.js"></script>
+       	 <!-- [ COMMON SCRIPT ] -->
+	<script src="js/common.js"></script>
+
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        fullscreenslider();
+    }
+     );
+
+ </script>
+
+</html>
