@@ -14,7 +14,7 @@ VERSION : 1.1
 
 .theme_background_color
 {
-    background-color:#00CD3C; /*Defines the theme bakcground color*/
+    background-color:#047331; /*Defines the theme bakcground color*/
 }
 
 .borderColor
@@ -59,7 +59,7 @@ VERSION : 1.1
 
 .sectionTitle hr
 {
-  border-color:#257525; 
+  border-color:#257525;
 }
 
 .sectionTitle .line{
@@ -73,7 +73,7 @@ VERSION : 1.1
 
 ol.type li a:hover{ color:#257525;}
 
-.ramsh-menu.navbar-default .navbar-nav > li > a:hover,a.fa.fa-angle-down:hover,.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover, 
+.ramsh-menu.navbar-default .navbar-nav > li > a:hover,a.fa.fa-angle-down:hover,.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus
 {
     color:#257525;
@@ -81,13 +81,13 @@ ol.type li a:hover{ color:#257525;}
 
 .navbar-toggle
 {
- 
+
  color:#257525;
 }
 
-.owl-theme .owl-controls .owl-page.active span, 
+.owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span,#contactbtn:hover {
-	
+
 	background:#257525;
 }
 .owl-theme .owl-controls .owl-page.active span{
@@ -100,7 +100,7 @@ ol.type li a:hover{ color:#257525;}
     color:#fff;
 }
 
-.footer .footer-social-icons li a:hover 
+.footer .footer-social-icons li a:hover
 {
     color:#257525;
 }
